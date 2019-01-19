@@ -43,6 +43,13 @@ class Student
     end
   end
 
+  def self.create(name:, grade:)
+    student = self.new
+    student.save(name, grade)
+    student
+
+  end
+
   def update
     sql = <<-SQL
     UPDATE students
